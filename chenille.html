@@ -1,20 +1,85 @@
+PILOT
+À PROPOS DES RÉSULTATS DE RECHERCHEÀ propos des résultats de recherche
+BLOC-NOTES
+Obtenir l’application
+Vous
+code pour dessiner une chenille colorée avec html
+Copilot
+Génération de vos réponses…
 
-    <svg width="300px" height="300px" style="background-color:lightgray">
-    
-    <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+Pour dessiner une chenille colorée en HTML, nous pouvons utiliser l’élément <canvas> et JavaScript. Voici un exemple simple pour créer une chenille avec des couleurs vives :
 
-    <circle cx="150" cy="150" r="40" stroke="black" stroke-width="3" fill="red" />
+HTML
 
-    <circle cx="250" cy="250" r="40" stroke="black" stroke-width="3" fill="red" />
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chenille Colorée</title>
+    <style>
+        /* Style du canevas */
+        canvas {
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="chenilleCanvas" width="300" height="200"></canvas>
 
-   <circle cx="50" cy="250" r="40" stroke="black" stroke-width="3" fill="red" />
-   
-   <circle cx="250" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
-       <circle cx="150" cy="150" r="40" stroke="black" stroke-width="3" fill="red" />
+    <script>
+        // Récupérer le canevas
+        const canvas = document.getElementById('chenilleCanvas');
+        const ctx = canvas.getContext('2d');
 
-    <circle cx="250" cy="250" r="40" stroke="black" stroke-width="3" fill="red" />
+        // Dessiner la chenille
+        ctx.beginPath();
+        ctx.arc(100, 100, 30, 0, Math.PI * 2); // Tête
+        ctx.fillStyle = 'green'; // Couleur de la tête
+        ctx.fill();
 
-   <circle cx="50" cy="250" r="40" stroke="black" stroke-width="3" fill="red" />
+        // Corps (plusieurs cercles)
+        const bodyColors = ['red', 'orange', 'yellow', 'blue', 'purple'];
+        const bodyRadius = 20;
+        const bodySpacing = 40;
+        for (let i = 0; i < 5; i++) {
+            ctx.beginPath();
+            ctx.arc(100 + (i * bodySpacing), 140, bodyRadius, 0, Math.PI * 2);
+            ctx.fillStyle = bodyColors[i];
+            ctx.fill();
+        }
 
-    </svg> 
+        // Queue
+        ctx.beginPath();
+        ctx.moveTo(100 + (5 * bodySpacing), 140);
+        ctx.lineTo(100 + (6 * bodySpacing), 140);
+        ctx.strokeStyle = 'black';
+        ctx.lineWidth = 3;
+        ctx.stroke();
 
+        // Yeux
+        ctx.beginPath();
+        ctx.arc(90, 95, 3, 0, Math.PI * 2); // Œil gauche
+        ctx.arc(110, 95, 3, 0, Math.PI * 2); // Œil droit
+        ctx.fillStyle = 'white';
+        ctx.fill();
+
+        // Sourire
+        ctx.beginPath();
+        ctx.arc(100, 105, 10, 0, Math.PI, false);
+        ctx.strokeStyle = 'black';
+        ctx.lineWidth = 2;
+        ctx.stroke();
+
+        // Antennes
+        ctx.beginPath();
+        ctx.moveTo(100, 70);
+        ctx.lineTo(80, 50);
+        ctx.moveTo(100, 70);
+        ctx.lineTo(120, 50);
+        ctx.strokeStyle = 'black';
+        ctx.lineWidth = 2;
+        ctx.stroke();
+    </script>
+</body>
+</html>
