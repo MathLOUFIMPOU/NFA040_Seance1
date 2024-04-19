@@ -1,65 +1,44 @@
-<html>
-<head>
-    <title>Exercice CSS</title>
-    <style>
-        html {background-color: black}
-		#Madiv1{color:white;
-		        background-color: green;
-				position: absolute;
-				left:25px;
-				top:25px;
-				widht:100px;
-				height:100px;
-				}
-	    
-     </style>
-	
-/* HTML */
-<div class="carre"></div>
-
-/* CSS */
-<style>
-  .carre {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100px;
-    height: 100px;
-    background-color: orange;
-  }
-</style>
-
-/* HTML */
-<div class="carre"></div>
-
-/* CSS */
-<style>
-  .carre {
-    position: low;
-    bottom: 0;
-    right: 0;
-    width: 100px;
-    height: 100px;
-    background-color: blue;
-  }
-</style>
-
-.carre {
-  position: left;
-  bottom: 0;
-  left: 0;
-  width: 100px;
-  height: 100px;
-  background-color: red;
-}
-</style>
-
-	<html lang="fr">
+<!DOCTYPE html>
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        .carre {
+        .container {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background-color: black;
+        }
+
+        .green {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            background-color: green;
+        }
+
+        .orange {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+        }
+
+        .red {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+
+        .blue {
             position: absolute;
             bottom: 0;
             right: 0;
@@ -70,16 +49,11 @@
     </style>
 </head>
 <body>
-    <div class="carre"></div>
-</body>
-    
-</head>
-<body>
-    <header>
-        <div id="Madiv1">En haut à gauche</div>
-        <div>En haut à droite</div>
-        <div>En bas à droite</div>
-        <div>En bas à gauche</div>
-    </header>
+    <div class="container">
+        <div class="green"></div>
+        <div class="orange"></div>
+        <div class="red"></div>
+        <div class="blue"></div>
+    </div>
 </body>
 </html>
