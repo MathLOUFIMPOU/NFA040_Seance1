@@ -6,54 +6,70 @@
     <style>
         .container {
             position: relative;
-            width: 28cm; /* 20cm (carré) + 4cm (espacement) + 4cm (carré) */
-            height: 28cm; /* 20cm (carré) + 4cm (espacement) + 4cm (carré) */
+            width: 20cm;
+            height: 20cm;
             background-color: black;
         }
 
-        .square {
+        .green {
             position: absolute;
-            width: 20cm;
-            height: 20cm;
+            top: 0;
+            left: 0;
+            width: 10cm;
+            height: 10cm;
+            background-color: green;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 16px;
-            font-weight: bold;
             color: white;
         }
 
-        .green {
-            top: 0;
-            left: 0;
-            background-color: green;
-        }
-
         .orange {
+            position: absolute;
             top: 0;
             right: 0;
+            width: 10cm;
+            height: 10cm;
             background-color: orange;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
         }
 
         .red {
+            position: absolute;
             bottom: 0;
             left: 0;
+            width: 10cm;
+            height: 10cm;
             background-color: red;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
         }
 
         .blue {
+            position: absolute;
             bottom: 0;
             right: 0;
+            width: 10cm;
+            height: 10cm;
             background-color: blue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="square green">En haut</div>
-        <div class="square orange">En haut</div>
-        <div class="square red">En haut</div>
-        <div class="square blue">En haut</div>
+        <div class="green">En haut à gauche</div>
+        <div class="orange">En hautdroite</div>
+        <div class="red">En bas à gauche</div>
+        <div class="blue">En basà droite</div>
     </div>
 </body>
 </html>
